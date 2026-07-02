@@ -42,6 +42,18 @@ app.get('/', (req, res) => {
       </table>
       
       <p style="margin-top: 20px;"><i>Déployé sur Render.com (PaaS)</i></p>
+     <p style="margin-top: 20px;"><i>
+     1. Que s'est-il passé après la tentative de déploiement sur la plateforme PaaS ?
+     Réponse : La connexion du dépôt GitHub au PaaS déclenche automatiquement un pipeline CI/CD (Déploiement Continu). La plateforme récupère le code source, installe les dépendances nécessaires (npm install via le package.json) et compile l'application Node.js pour tenter de l'exposer sur une URL publique sécurisée.
+
+     2. Qui gère les mises à jour de sécurité du serveur dans ce modèle ?
+     Réponse : C'est la responsabilité exclusive du Cloud Provider. Toute la gestion de l'infrastructure sous-jacente (système d'exploitation, correctifs de sécurité, serveurs web et virtualisation) est totalement masquée pour le développeur, qui a uniquement la charge de sécuriser son propre code applicatif.
+
+     3. Quel serait l'inconvénient du PaaS si votre application avait des besoins système très spécifiques ?
+     Réponse : Le PaaS impose un environnement d'exécution très standardisé et rigide. Si notre application exige des configurations OS sur-mesure, des packages Linux spécifiques ou des accès bas niveau au noyau (kernel), le PaaS devient bloquant. Il faudrait alors basculer sur du IaaS (Infrastructure as a Service) pour configurer notre propre machine virtuelle.
+
+     4. Le serveur s'éteint automatiquement après 15 minutes d'inactivité. Quel concept Cloud cela illustre-t-il ?
+     Réponse : Cela illustre le concept de Scale-to-Zero (Scalabilité automatique à zéro). Les fournisseurs de Cloud l'utilisent pour optimiser leurs ressources physiques : en l'absence de trafic, l'application est mise en veille pour libérer la mémoire et la puissance de calcul. C'est indispensable pour réduire les coûts opérationnels et l'empreinte énergétique des offres gratuites.</i></p>
     </body>
     </html>
   `);
