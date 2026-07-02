@@ -35,6 +35,10 @@ app.get('/', (req, res) => {
           <td><b>Heure serveur</b></td>
           <td>${new Date().toISOString()}</td>
         </tr>
+           <tr>
+          <td><b>Hawa Kaba et Affou Coulibaly</b></td>
+          <td>Hawa Kaba et Affou Coulibaly M1 MIAGE</td>
+        </tr>
       </table>
       
       <p style="margin-top: 20px;"><i>Déployé sur Render.com (PaaS)</i></p>
