@@ -39,6 +39,10 @@ app.get('/', (req, res) => {
           <td><b>Hawa Kaba et Affou Coulibaly</b></td>
           <td>Hawa Kaba et Affou Coulibaly M1 MIAGE</td>
         </tr>
+        <tr>
+          <td><b>ENV</b></td>
+          <td>${process.env.NODE_ENV || 'development'}</td>
+        </tr>
       </table>
       
       <p style="margin-top: 20px;"><i>Déployé sur Render.com (PaaS)</i></p>
